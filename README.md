@@ -2,7 +2,7 @@
 <!-- Our SemEval-2024 Task 9 competition code repository. -->
 
 ### This repository houses the data and code related to our submission for the SemEval-2024 Task 9 competition titled "BRAINTEASER: A Novel Task Defying Common Sense". 
-### For a comprehensive overview of our system, refer to our <u>***[system description paper](https://arxiv.org/abs/2404.01084)***</u>.
+### For a comprehensive overview of our system, refer to our ***[system description paper](https://arxiv.org/abs/2404.01084)***.
 
 Feel free to explore our implementation, data resources, and findings documented in this repository. If you have any questions or feedback, please reach out. We hope our contribution advances the understanding and exploration of this intriguing task.
 
