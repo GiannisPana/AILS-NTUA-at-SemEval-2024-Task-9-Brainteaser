@@ -1,7 +1,8 @@
 # AILS-NTUA at SemEval-2024: Task 9-Brainteaser
 <!-- Our SemEval-2024 Task 9 competition code repository. -->
 
-## This repository houses the data and code related to our submission for the SemEval-2024 Task 9 competition titled "BRAINTEASER: A Novel Task Defying Common Sense". For a comprehensive overview of our system, refer to our [system description paper](https://arxiv.org/abs/2404.01084).
+### This repository houses the data and code related to our submission for the SemEval-2024 Task 9 competition titled "BRAINTEASER: A Novel Task Defying Common Sense". 
+### For a comprehensive overview of our system, refer to our <u>***[system description paper](https://arxiv.org/abs/2404.01084)***</u>.
 
 Feel free to explore our implementation, data resources, and findings documented in this repository. If you have any questions or feedback, please reach out. We hope our contribution advances the understanding and exploration of this intriguing task.
 
@@ -17,7 +18,7 @@ The data for the BrainTeaser dataset is organized into two subtasks:
 1. Sentence Puzzle (Sub-task A)
 2. Word Puzzle (Sub-task B). 
 
-You can access the dataset in the [data](./data/) directory, where detailed information about the dataset files is available.
+You can access the dataset in the ***[data directory](./data/)***, where detailed information about the dataset files is available.
 
 
 ### 2. Techniques Overview
@@ -35,7 +36,8 @@ You can access the dataset in the [data](./data/) directory, where detailed info
 These techniques enabled us to explore different training approaches and evaluate model performance within the context of the BrainTeaser task. Explore our notebooks for detailed implementations and results. 
 
 
-### The implementation code related to the mentioned techniques is located in the [model_training](./model_training/) folder. Detailed information about each notebook's functionality and methodology can be explored within this directory.
+### The implementation code related to the mentioned techniques is located in the ***[model_training directory](./model_training/)***. 
+#### Detailed information about each notebook's functionality and methodology can be explored within the aforementioned directory.
 
 ### 3. **Evaluation Metrics:**
 
