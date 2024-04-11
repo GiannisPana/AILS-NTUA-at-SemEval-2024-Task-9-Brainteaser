@@ -3,11 +3,11 @@ The notebooks corresponding to the fine-tuning of encoder models and LLMs for mo
 
 | Notebook                                                               | Description                                                     |
 |------------------------------------------------------------------------|-----------------------------------------------------------------|
-| [small_models_hyperparameter_search](./small_models_hyperparameter_search.ipynb) | Hyperparameter search for small encoder models.                 |
 | [small_models_training_multiple_choice](./small_models_training_multiple_choice.ipynb) | Training small encoder models for multi-class classification.   |
 | [small_models_training_text_classification](./small_models_training_text_classification.ipynb) | Training small encoder models for binary text classification.   |
 | [QLoRA_LLMs_finetuning_multiple_choice](./QLoRA_LLMs_finetuning_multiple_choice.ipynb) | Fine-tuning LLMs for multi-class classification tasks.          |
 | [QLoRA_LLMs_finetuning_text_classification](./QLoRA_LLMs_finetuning_text_classification.ipynb) | Fine-tuning LLMs for binary text classification tasks.          |
+<!-- | [small_models_hyperparameter_search](./small_models_hyperparameter_search.ipynb) | Hyperparameter search for small encoder models.                 | -->
 
 **Important Notes:**
 
