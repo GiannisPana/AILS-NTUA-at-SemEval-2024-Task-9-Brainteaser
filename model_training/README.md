@@ -1,4 +1,8 @@
 # Model Training
+
+For programmatic data loading, metrics, and submission helpers, see the
+[`semeval2024_task9`](../semeval2024_task9/README.md) Python package.
+
 The notebooks corresponding to the fine-tuning of encoder models and LLMs for model evaluation are organized as follows:
 
 | Notebook                                                               | Description                                                     |

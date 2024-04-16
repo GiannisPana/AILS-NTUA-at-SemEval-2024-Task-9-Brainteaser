@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the AILS-NTUA SemEval-2024 Task 9 system paper."
+title: "AILS-NTUA at SemEval-2024 Task 9: BrainTeaser"
+type: software
+authors:
+  - family-names: Panagiotopoulos
+    given-names: Ioannis
+  - family-names: Filandrianos
+    given-names: Giorgos
+  - family-names: Lymperaiou
+    given-names: Maria
+  - family-names: Stamou
+    given-names: Giorgos
+repository-code: "https://github.com/GiannisPana/AILS-NTUA-at-SemEval-2024-Task-9-Brainteaser"
+url: "https://github.com/GiannisPana/AILS-NTUA-at-SemEval-2024-Task-9-Brainteaser"
+license: MIT
+version: 0.1.0
+date-released: "2024-06-01"
+preferred-citation:
+  type: conference-paper
+  title: "AILS-NTUA at SemEval-2024 Task 9: Cracking Brain Teasers: Transformer Models for Lateral Thinking Puzzles"
+  authors:
+    - family-names: Panagiotopoulos
+      given-names: Ioannis
+    - family-names: Filandrianos
+      given-names: George
+    - family-names: Lymperaiou
+      given-names: Maria
+    - family-names: Stamou
+      given-names: Giorgos
+  collection-title: "Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)"
+  conference:
+    name: "SemEval-2024"
+    location: "Mexico City, Mexico"
+  publisher:
+    name: "Association for Computational Linguistics"
+  year: 2024
+  month: 6
+  start: 1733
+  end: 1746
+  doi: "10.18653/v1/2024.semeval-1.248"
+  url: "https://aclanthology.org/2024.semeval-1.248/"
+  identifiers:
+    - type: other
+      value: "arXiv:2404.01084"
+      description: "arXiv preprint"

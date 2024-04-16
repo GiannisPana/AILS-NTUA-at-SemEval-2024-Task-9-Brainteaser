@@ -1,0 +1,12 @@
+# Encoder notebooks did not pin transformers/torch. These ranges target the
+# 2024-era behavior used in the SemEval system paper; exact reproduction may
+# require manual adjustment for the user's CUDA/PyTorch environment.
+numpy>=1.24,<2.0
+datasets==2.14.6
+torch>=2.0,<2.3
+transformers>=4.30,<4.40
+evaluate>=0.4,<0.5
+accelerate>=0.20,<0.28
+scikit-learn>=1.2,<1.5
+pandas>=1.5,<2.3
+tqdm>=4.65,<5

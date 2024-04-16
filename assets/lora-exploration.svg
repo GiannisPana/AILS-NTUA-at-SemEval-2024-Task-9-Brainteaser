@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 770" role="img" aria-labelledby="title desc" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title id="title">How LoRA r and alpha shape QLoRA accuracy across model families</title>
+  <desc id="desc">Two-panel bar chart of QLoRA configurations from AILS-NTUA SemEval-2024 Task 9 paper Tables 4 and 5. Sentence Puzzle on top, Word Puzzle on bottom. Each bar is one (r, alpha) configuration grouped by model family.</desc>
+
+  <rect width="960" height="770" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="480" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#18181b">How LoRA r and &#945; Shape QLoRA Accuracy</text>
+  <text x="480" y="56" text-anchor="middle" font-size="13" fill="#52525b">Each bar is one (r, &#945;) configuration; height = overall accuracy from the paper.</text>
+
+  <!-- Explanation box -->
+  <rect x="80" y="72" width="800" height="62" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="92" y="92" font-size="12" fill="#1e293b">
+    <tspan font-weight="700">r</tspan> — rank of LoRA's trainable low-rank matrices (higher r = more capacity for adaptation).
+  </text>
+  <text x="92" y="109" font-size="12" fill="#1e293b">
+    <tspan font-weight="700">&#945;</tspan> — LoRA scaling factor; adapter's effective contribution scales as &#945; / r.
+  </text>
+  <text x="92" y="126" font-size="11" font-style="italic" fill="#475569">
+    Read across families: Mistral is robust to (r, &#945;) choices; Llama 2 is fragile to &#945;; Phi-2 plateaus regardless of config.
+  </text>
+
+  <!-- Legend -->
+  <g font-size="11" fill="#27272a">
+    <rect x="345" y="146" width="11" height="11" fill="#2563eb"/><text x="362" y="156">Mistral-7B</text>
+    <rect x="445" y="146" width="11" height="11" fill="#0d9488"/><text x="462" y="156">Mixtral-8x7B</text>
+    <rect x="555" y="146" width="11" height="11" fill="#ea580c"/><text x="572" y="156">Llama 2</text>
+    <rect x="625" y="146" width="11" height="11" fill="#71717a"/><text x="642" y="156">Phi-2</text>
+  </g>
+
+  <!-- ============ SENTENCE PUZZLE PANEL ============ -->
+  <text x="80" y="184" font-size="15" font-weight="700" fill="#18181b">Sentence Puzzle</text>
+
+  <!-- y-axis gridlines and labels (plot area: x 130-900, y 195-395 = 200px for 100%) -->
+  <g font-size="10" fill="#71717a">
+    <line x1="130" y1="195" x2="900" y2="195" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="125" y="199" text-anchor="end">100</text>
+    <line x1="130" y1="245" x2="900" y2="245" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="125" y="249" text-anchor="end">75</text>
+    <line x1="130" y1="295" x2="900" y2="295" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="125" y="299" text-anchor="end">50</text>
+    <line x1="130" y1="345" x2="900" y2="345" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="125" y="349" text-anchor="end">25</text>
+    <line x1="130" y1="395" x2="900" y2="395" stroke="#475569" stroke-width="1"/>
+    <text x="125" y="399" text-anchor="end">0</text>
+  </g>
+  <text x="68" y="295" text-anchor="middle" transform="rotate(-90 68 295)" font-size="11" fill="#475569">Overall accuracy (%)</text>
+
+  <!-- ChatGPT baseline at 62.7%: y = 395 - 62.7*2 = 269.6 -->
+  <line x1="130" y1="269.6" x2="780" y2="269.6" stroke="#dc2626" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="788" y="273" font-size="10" font-weight="600" fill="#dc2626">ChatGPT &#183; 62.7</text>
+
+  <!-- Mistral group: x 160-304 -->
+  <g text-anchor="middle">
+    <rect x="160" y="231.6" width="44" height="163.4" fill="#2563eb"/>
+    <text x="182" y="225" font-size="11" font-weight="700" fill="#18181b">81.7</text>
+    <text x="182" y="408" font-size="9" fill="#27272a">r 128</text>
+    <text x="182" y="420" font-size="9" fill="#27272a">&#945; 128</text>
+
+    <rect x="210" y="231.6" width="44" height="163.4" fill="#2563eb"/>
+    <text x="232" y="225" font-size="11" font-weight="700" fill="#18181b">81.7</text>
+    <text x="232" y="408" font-size="9" fill="#27272a">r 64</text>
+    <text x="232" y="420" font-size="9" fill="#27272a">&#945; 128</text>
+
+    <rect x="260" y="231.6" width="44" height="163.4" fill="#2563eb"/>
+    <text x="282" y="225" font-size="11" font-weight="700" fill="#18181b">81.7</text>
+    <text x="282" y="408" font-size="9" fill="#27272a">r 16</text>
+    <text x="282" y="420" font-size="9" fill="#27272a">&#945; 64</text>
+  </g>
+  <text x="232" y="438" text-anchor="middle" font-size="11" font-weight="600" fill="#2563eb">Mistral-7B</text>
+
+  <!-- Mixtral group: x 334-378 -->
+  <g text-anchor="middle">
+    <rect x="334" y="235" width="44" height="160" fill="#0d9488"/>
+    <text x="356" y="228" font-size="11" font-weight="700" fill="#18181b">80.0</text>
+    <text x="356" y="408" font-size="9" fill="#27272a">r 128</text>
+    <text x="356" y="420" font-size="9" fill="#27272a">&#945; 128</text>
+  </g>
+  <text x="356" y="438" text-anchor="middle" font-size="11" font-weight="600" fill="#0d9488">Mixtral-8x7B</text>
+
+  <!-- Llama 2 group: x 408-602 (4 bars) -->
+  <g text-anchor="middle">
+    <rect x="408" y="256.6" width="44" height="138.4" fill="#ea580c"/>
+    <text x="430" y="250" font-size="11" font-weight="700" fill="#18181b">69.2</text>
+    <text x="430" y="408" font-size="9" font-weight="600" fill="#9a3412">7B</text>
+    <text x="430" y="420" font-size="9" fill="#27272a">r 64, &#945; 128</text>
+
+    <rect x="458" y="266.8" width="44" height="128.2" fill="#ea580c"/>
+    <text x="480" y="260" font-size="11" font-weight="700" fill="#18181b">64.1</text>
+    <text x="480" y="408" font-size="9" font-weight="600" fill="#9a3412">13B</text>
+    <text x="480" y="420" font-size="9" fill="#27272a">r 64, &#945; 64</text>
+
+    <rect x="508" y="268.4" width="44" height="126.6" fill="#ea580c"/>
+    <text x="530" y="262" font-size="11" font-weight="700" fill="#18181b">63.3</text>
+    <text x="530" y="408" font-size="9" font-weight="600" fill="#9a3412">7B</text>
+    <text x="530" y="420" font-size="9" fill="#27272a">r 64, &#945; 64</text>
+
+    <rect x="558" y="333.4" width="44" height="61.6" fill="#ea580c"/>
+    <text x="580" y="327" font-size="11" font-weight="700" fill="#18181b">30.8</text>
+    <text x="580" y="408" font-size="9" font-weight="600" fill="#9a3412">7B</text>
+    <text x="580" y="420" font-size="9" fill="#27272a">r 64, &#945; 32</text>
+  </g>
+  <text x="505" y="438" text-anchor="middle" font-size="11" font-weight="600" fill="#ea580c">Llama 2</text>
+
+  <!-- Phi-2 group: x 632-776 -->
+  <g text-anchor="middle">
+    <rect x="632" y="278.4" width="44" height="116.6" fill="#71717a"/>
+    <text x="654" y="272" font-size="11" font-weight="700" fill="#18181b">58.3</text>
+    <text x="654" y="408" font-size="9" fill="#27272a">r 64</text>
+    <text x="654" y="420" font-size="9" fill="#27272a">&#945; 128</text>
+
+    <rect x="682" y="278.4" width="44" height="116.6" fill="#71717a"/>
+    <text x="704" y="272" font-size="11" font-weight="700" fill="#18181b">58.3</text>
+    <text x="704" y="408" font-size="9" fill="#27272a">r 128</text>
+    <text x="704" y="420" font-size="9" fill="#27272a">&#945; 128</text>
+
+    <rect x="732" y="295" width="44" height="100" fill="#71717a"/>
+    <text x="754" y="289" font-size="11" font-weight="700" fill="#18181b">50.0</text>
+    <text x="754" y="408" font-size="9" fill="#27272a">r 64</text>
+    <text x="754" y="420" font-size="9" fill="#27272a">&#945; 64</text>
+  </g>
+  <text x="704" y="438" text-anchor="middle" font-size="11" font-weight="600" fill="#71717a">Phi-2</text>
+
+  <!-- ============ WORD PUZZLE PANEL ============ -->
+  <text x="80" y="478" font-size="15" font-weight="700" fill="#18181b">Word Puzzle</text>
+
+  <g font-size="10" fill="#71717a">
+    <line x1="130" y1="490" x2="900" y2="490" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="125" y="494" text-anchor="end">100</text>
+    <line x1="130" y1="540" x2="900" y2="540" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="125" y="544" text-anchor="end">75</text>
+    <line x1="130" y1="590" x2="900" y2="590" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="125" y="594" text-anchor="end">50</text>
+    <line x1="130" y1="640" x2="900" y2="640" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="125" y="644" text-anchor="end">25</text>
+    <line x1="130" y1="690" x2="900" y2="690" stroke="#475569" stroke-width="1"/>
+    <text x="125" y="694" text-anchor="end">0</text>
+  </g>
+  <text x="68" y="590" text-anchor="middle" transform="rotate(-90 68 590)" font-size="11" fill="#475569">Overall accuracy (%)</text>
+
+  <!-- ChatGPT baseline at 53.5%: y = 690 - 53.5*2 = 583 -->
+  <line x1="130" y1="583" x2="730" y2="583" stroke="#dc2626" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="738" y="586" font-size="10" font-weight="600" fill="#dc2626">ChatGPT &#183; 53.5</text>
+
+  <!-- Mistral group: x 160-304 (3 bars) -->
+  <g text-anchor="middle">
+    <rect x="160" y="519.2" width="44" height="170.8" fill="#2563eb"/>
+    <text x="182" y="513" font-size="11" font-weight="700" fill="#18181b">85.4</text>
+    <text x="182" y="703" font-size="9" fill="#27272a">r 16</text>
+    <text x="182" y="715" font-size="9" fill="#27272a">&#945; 64</text>
+
+    <rect x="210" y="523.4" width="44" height="166.6" fill="#2563eb"/>
+    <text x="232" y="517" font-size="11" font-weight="700" fill="#18181b">83.3</text>
+    <text x="232" y="703" font-size="9" fill="#27272a">r 128</text>
+    <text x="232" y="715" font-size="9" fill="#27272a">&#945; 128</text>
+
+    <rect x="260" y="523.4" width="44" height="166.6" fill="#2563eb"/>
+    <text x="282" y="517" font-size="11" font-weight="700" fill="#18181b">83.3</text>
+    <text x="282" y="703" font-size="9" fill="#27272a">r 8</text>
+    <text x="282" y="715" font-size="9" fill="#27272a">&#945; 16</text>
+  </g>
+  <text x="232" y="733" text-anchor="middle" font-size="11" font-weight="600" fill="#2563eb">Mistral-7B</text>
+
+  <!-- Mixtral group: x 334-378 -->
+  <g text-anchor="middle">
+    <rect x="334" y="558.8" width="44" height="131.2" fill="#0d9488"/>
+    <text x="356" y="552" font-size="11" font-weight="700" fill="#18181b">65.6</text>
+    <text x="356" y="703" font-size="9" fill="#27272a">r 128</text>
+    <text x="356" y="715" font-size="9" fill="#27272a">&#945; 128</text>
+  </g>
+  <text x="356" y="733" text-anchor="middle" font-size="11" font-weight="600" fill="#0d9488">Mixtral-8x7B</text>
+
+  <!-- Llama 2 group: x 408-552 (3 bars) -->
+  <g text-anchor="middle">
+    <rect x="408" y="614.2" width="44" height="75.8" fill="#ea580c"/>
+    <text x="430" y="608" font-size="11" font-weight="700" fill="#18181b">37.9</text>
+    <text x="430" y="703" font-size="9" font-weight="600" fill="#9a3412">13B</text>
+    <text x="430" y="715" font-size="9" fill="#27272a">r 64, &#945; 64</text>
+
+    <rect x="458" y="617" width="44" height="73" fill="#ea580c"/>
+    <text x="480" y="611" font-size="11" font-weight="700" fill="#18181b">36.5</text>
+    <text x="480" y="703" font-size="9" font-weight="600" fill="#9a3412">7B</text>
+    <text x="480" y="715" font-size="9" fill="#27272a">r 64, &#945; 64</text>
+
+    <rect x="508" y="629.6" width="44" height="60.4" fill="#ea580c"/>
+    <text x="530" y="623" font-size="11" font-weight="700" fill="#18181b">30.2</text>
+    <text x="530" y="703" font-size="9" font-weight="600" fill="#9a3412">7B</text>
+    <text x="530" y="715" font-size="9" fill="#27272a">r 64, &#945; 128</text>
+  </g>
+  <text x="480" y="733" text-anchor="middle" font-size="11" font-weight="600" fill="#ea580c">Llama 2</text>
+
+  <!-- Phi-2 group: x 582-726 -->
+  <g text-anchor="middle">
+    <rect x="582" y="556.6" width="44" height="133.4" fill="#71717a"/>
+    <text x="604" y="550" font-size="11" font-weight="700" fill="#18181b">66.7</text>
+    <text x="604" y="703" font-size="9" fill="#27272a">r 64</text>
+    <text x="604" y="715" font-size="9" fill="#27272a">&#945; 64</text>
+
+    <rect x="632" y="560.8" width="44" height="129.2" fill="#71717a"/>
+    <text x="654" y="554" font-size="11" font-weight="700" fill="#18181b">64.6</text>
+    <text x="654" y="703" font-size="9" fill="#27272a">r 64</text>
+    <text x="654" y="715" font-size="9" fill="#27272a">&#945; 128</text>
+
+    <rect x="682" y="569.2" width="44" height="120.8" fill="#71717a"/>
+    <text x="704" y="563" font-size="11" font-weight="700" fill="#18181b">60.4</text>
+    <text x="704" y="703" font-size="9" fill="#27272a">r 16</text>
+    <text x="704" y="715" font-size="9" fill="#27272a">&#945; 64</text>
+  </g>
+  <text x="654" y="733" text-anchor="middle" font-size="11" font-weight="600" fill="#71717a">Phi-2</text>
+
+  <!-- Footer -->
+  <text x="480" y="757" text-anchor="middle" font-size="10" fill="#71717a">Source: AILS-NTUA at SemEval-2024 Task 9 (ACL 2024.semeval-1.248), Tables 4 and 5, Overall column. Bar labels show r and &#945; for each LoRA configuration.</text>
+</svg>
