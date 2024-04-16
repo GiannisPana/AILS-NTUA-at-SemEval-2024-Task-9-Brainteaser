@@ -56,7 +56,7 @@ The dataset splits and details for each subtask are summarized in the following 
 ```
 
 ### Test Dataset Format (with an example)
-The presented dataset format represent the result of preprocessing both the test data and their corresponding answers separately. Subsequently, these processed datasets were merged to form the structured format outlined.
+The presented dataset format represents the outcome of preprocessing the test data and their corresponding answers separately. Afterwards, these processed datasets were combined to create the structured format described.
 
 ```json
 {
