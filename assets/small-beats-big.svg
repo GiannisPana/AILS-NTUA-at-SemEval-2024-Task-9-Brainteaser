@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 390" role="img" aria-labelledby="title desc">
+  <title id="title">Mistral-7B versus Mixtral-8x7B at matched LoRA configuration</title>
+  <desc id="desc">Bar chart showing Mistral-7B beating Mixtral-8x7B at r=128 alpha=128 on Sentence Puzzle and Word Puzzle.</desc>
+  <rect width="720" height="390" fill="#ffffff"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#172033">Matched LoRA Config: r=128, alpha=128</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#526070">Mistral-7B vs the paper's 8x larger Mixtral-8x7B comparison</text>
+  <g stroke="#d9dee7"><line x1="82" y1="320" x2="675" y2="320"/><line x1="82" y1="255" x2="675" y2="255"/><line x1="82" y1="190" x2="675" y2="190"/><line x1="82" y1="125" x2="675" y2="125"/><line x1="82" y1="60" x2="675" y2="60"/></g>
+  <line x1="82" y1="320" x2="675" y2="320" stroke="#7b8494"/>
+  <line x1="82" y1="60" x2="82" y2="320" stroke="#7b8494"/>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#526070" text-anchor="end">
+    <text x="72" y="324">0</text><text x="72" y="259">25</text><text x="72" y="194">50</text><text x="72" y="129">75</text><text x="72" y="64">100</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="12" text-anchor="middle">
+    <rect x="190" y="107.6" width="70" height="212.4" fill="#1f78d1"/><text x="225" y="101" font-weight="700" fill="#172033">81.7</text>
+    <rect x="275" y="112.0" width="70" height="208.0" fill="#72b7b2"/><text x="310" y="106" fill="#172033">80.0</text>
+    <rect x="455" y="103.4" width="70" height="216.6" fill="#1f78d1"/><text x="490" y="97" font-weight="700" fill="#172033">83.3</text>
+    <rect x="540" y="149.4" width="70" height="170.6" fill="#72b7b2"/><text x="575" y="143" fill="#172033">65.6</text>
+    <text x="267" y="352" font-size="14" font-weight="700" fill="#172033">Sentence Puzzle</text>
+    <text x="532" y="352" font-size="14" font-weight="700" fill="#172033">Word Puzzle</text>
+  </g>
+  <text x="583" y="118" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1f78d1">+17.7 pts</text>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#364152">
+    <rect x="240" y="370" width="12" height="12" fill="#1f78d1"/><text x="258" y="380">Mistral-7B</text>
+    <rect x="370" y="370" width="12" height="12" fill="#72b7b2"/><text x="388" y="380">Mixtral-8x7B</text>
+  </g>
+</svg>

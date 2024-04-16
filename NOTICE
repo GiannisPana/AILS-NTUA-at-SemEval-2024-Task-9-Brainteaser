@@ -1,0 +1,6 @@
+The MIT License applies to the code and documentation authored in this
+repository. Files under data/*.npy and data/readme.pdf are BrainTeaser /
+SemEval task materials from the upstream organizers and remain governed by
+their upstream terms. See the BrainTeaser organizer repository
+https://github.com/1171-jpg/BrainTeaser and the SemEval-2024 Task 9 paper
+https://aclanthology.org/2024.semeval-1.274/ for dataset provenance.

@@ -1,4 +1,8 @@
 # Data Overview
+
+For programmatic loading and triplet utilities, see
+[`semeval2024_task9/data`](../semeval2024_task9/data/README.md).
+
 The data contained in this directory are as follows:
 
 - Semeval Competition
